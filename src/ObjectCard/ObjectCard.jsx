@@ -11,7 +11,8 @@ class ObjectCard extends React.Component{
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.physicallyCorrectLights = true;
         scene.background = new Color("grey");
-        document.body.appendChild(renderer.domElement);
+        // document.body.appendChild(renderer.domElement);
+        this.mount.appendChild(renderer.domElement);
 
         const loader = new GLTFLoader();    
         loader.load(lionPath, function(gltf){
@@ -34,7 +35,10 @@ class ObjectCard extends React.Component{
     }
 
     render(){
-        return (<div></div>)
+        return (
+            <div ref={ref => (this.mount = ref)}>
+            </div>
+        )
     }
 }
 
