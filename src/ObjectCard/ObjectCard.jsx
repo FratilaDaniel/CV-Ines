@@ -7,7 +7,7 @@ class ObjectCard extends React.Component{
     constructor(){
         super();
         this.state = {
-            elementIsActive: false,
+            isMouseOver: false,
             animationStarted: true
         };
     }
@@ -43,23 +43,39 @@ class ObjectCard extends React.Component{
         camera.position.y = 5;
         camera.position.z = 7;
 
-        function startAnimation(){
+        this.startAnimation = () => {
+            console.log(this.state.isMouseOver)
+            if(model && !this.state.isMouseOver){
+                model.rotation.y += 0.01;
+            }
             // default behavior: rotate
             // stop when user hovers/clicks
-            requestAnimationFrame(startAnimation);   
+            requestAnimationFrame(this.startAnimation);   
             // console.log(frameId, shouldAnimationPlay);
-            if(model){
-                model.rotation.y += 0.01;
-                renderer.render(scene, camera);         
-            }
+            renderer.render(scene, camera);   
         }
-        return requestAnimationFrame(startAnimation);
+        return requestAnimationFrame(this.startAnimation);
+    }
+
+    handleMouseOver(){
+        this.setState({
+            isMouseOver: true
+        });
+    }
+
+    handleMouseOut(){
+        this.setState({
+            isMouseOver: false
+        });
     }
 
 
     render(){
         return (
-            <div ref={ref => (this.mount = ref)}>
+            <div ref={ref => (this.mount = ref)}
+                onMouseOver={() => this.handleMouseOver()}
+                onMouseOut={() => this.handleMouseOut()}
+            >
             </div>
         )
     }
