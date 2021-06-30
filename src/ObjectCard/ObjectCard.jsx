@@ -4,35 +4,58 @@ import React from "react";
 import lionPath from "../resources3D/lion_wL_3.glb";
 
 class ObjectCard extends React.Component{
+    constructor(){
+        super();
+        this.state = {
+            elementIsActive: false,
+            animationStarted: true
+        };
+    }
+
     componentDidMount(){
+        this.animateThings();
+    }
+
+
+    animateThings(){
         const scene = new Scene();
-        const camera = new PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-        const renderer = new WebGLRenderer();
+        const camera = new PerspectiveCamera(45, window.innerWidth/window.innerHeight, 1, 1000);
+        const renderer = new WebGLRenderer({antialias: true});
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.physicallyCorrectLights = true;
         scene.background = new Color("grey");
-        // document.body.appendChild(renderer.domElement);
         this.mount.appendChild(renderer.domElement);
+        
+        let model;
 
         const loader = new GLTFLoader();    
         loader.load(lionPath, function(gltf){
-            scene.add(gltf.scene);
+            model = gltf.scene;
+            scene.add(model);
         }, 
-        undefined, // loading animation function 
+        undefined, // loading animation/text function 
         function(e){
             console.log("AAAAAAAAAAAAAAAAAA");
             console.log(e);
         });
 
-        camera.position.z = 6;
+        camera.rotation.x = -0.5;
+        camera.position.y = 5;
+        camera.position.z = 7;
 
-        function animate(){
-            requestAnimationFrame(animate);                        
-            renderer.render(scene, camera);
+        function startAnimation(){
+            // default behavior: rotate
+            // stop when user hovers/clicks
+            requestAnimationFrame(startAnimation);   
+            // console.log(frameId, shouldAnimationPlay);
+            if(model){
+                model.rotation.y += 0.01;
+                renderer.render(scene, camera);         
+            }
         }
-
-        animate();
+        return requestAnimationFrame(startAnimation);
     }
+
 
     render(){
         return (
