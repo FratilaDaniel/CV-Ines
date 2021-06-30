@@ -20,10 +20,10 @@ class ObjectCard extends React.Component{
     animateThings(){
         const scene = new Scene();
         const camera = new PerspectiveCamera(45, window.innerWidth/window.innerHeight, 1, 1000);
-        const renderer = new WebGLRenderer({antialias: true});
+        const renderer = new WebGLRenderer({antialias: true, alpha: true});
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.physicallyCorrectLights = true;
-        scene.background = new Color("grey");
+        renderer.setClearColor(0x000000, 0);
         this.mount.appendChild(renderer.domElement);
         
         let model;
@@ -44,14 +44,12 @@ class ObjectCard extends React.Component{
         camera.position.z = 7;
 
         this.startAnimation = () => {
-            console.log(this.state.isMouseOver)
             if(model && !this.state.isMouseOver){
                 model.rotation.y += 0.01;
             }
             // default behavior: rotate
             // stop when user hovers/clicks
             requestAnimationFrame(this.startAnimation);   
-            // console.log(frameId, shouldAnimationPlay);
             renderer.render(scene, camera);   
         }
         return requestAnimationFrame(this.startAnimation);
