@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 
 function Header(){
 
@@ -9,7 +8,6 @@ function Header(){
                 <p>ines</p>
                 <p>simonica</p>
             </div>
-            <Navbar/>
         </div>
     );
 }

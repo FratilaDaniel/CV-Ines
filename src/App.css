@@ -1,5 +1,5 @@
 body{
-    background-color: darkgoldenrod;
+    /* background-color: black; */
 }
 
 .random-div{
@@ -9,9 +9,9 @@ body{
 
 /* Page container */
 .general-container{
-    background-color: beige;
     display: flex;
     flex-direction: column;
+    background-image: linear-gradient(#0B1022, #181318, #211E2D);
 }
 
 
@@ -19,7 +19,7 @@ body{
 
 /* Header - name + bkg img  + navbar*/
 .header-container{
-    background-image: linear-gradient(#190038, black);
+    background-image: linear-gradient(#21004A, rgba(174, 136, 255, 0.31) 40%, rgba(0, 0, 0, 0));
     position: relative;
     display: flex;
     flex-direction: column;

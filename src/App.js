@@ -6,12 +6,15 @@ import Projects3D from './views/Projects3D';
 import Artworks from './views/ProjectsArtworks';
 import Games from './views/ProjectsGames';
 import Footer from "./views/Footer";
+import Navbar from "./views/Navbar";
 
 function App() {
     return (
             <div className="general-container">
-                {/* Header + navbar - name + bkg img */}
+                {/* Header - name + bkg img */}
                 <Header/>
+                {/* Navbar menu + decorations */}
+                <Navbar/>
                 {/* PersonalDetails - about me section */}
                 <PersonalDetails/>
                 {/* Projects - 3D works */}
