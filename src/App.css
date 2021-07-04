@@ -6,3 +6,54 @@ body{
     background-color: teal;
     text-align: center;
 }
+
+/* Page container */
+.general-container{
+    background-color: beige;
+    display: flex;
+    flex-flow: column;
+}
+
+
+
+
+/* Header - name + bkg img */
+.header-container{
+    background-color: teal;
+}
+
+/* Navbar - plus decorators */
+.navbar-container{
+    background-color: bisque;
+}
+
+/* PersonalDetails - about me section */
+.details-container{
+    background-color: lightblue;
+}
+
+/* Projects - 3D works */
+.projects3d-container{
+    background-color: lightgreen;
+}
+
+/* Projects - games */
+.games-container{
+    background-color: lightcoral
+}
+
+/* Projects - art works */
+.artworks-container{
+    background-color: lightcyan;
+}
+
+/* Footer - credits: Dani */
+.footer-container{
+    background-color: lightpink;
+}
+
+
+
+
+
+
