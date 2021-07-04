@@ -11,20 +11,37 @@ body{
 .general-container{
     background-color: beige;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
 }
 
 
 
 
-/* Header - name + bkg img */
+/* Header - name + bkg img  + navbar*/
 .header-container{
-    background-color: teal;
+    background-image: linear-gradient(#190038, black);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.names-container{
+    color: white;
+    font-size: 7em;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    /* TODO: change font */
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
 }
 
 /* Navbar - plus decorators */
 .navbar-container{
-    background-color: bisque;
+    margin: 50px 0;
+    color: white;
 }
 
 /* PersonalDetails - about me section */
