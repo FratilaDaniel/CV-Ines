@@ -85,7 +85,7 @@ p{
 }
 
 .line-deco hr{
-    border: none;
+    display: none;
 }
 
 /* contains only card (title + p) */
