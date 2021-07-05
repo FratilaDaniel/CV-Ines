@@ -3,6 +3,12 @@ h1{
     margin-left: 50px;
 }
 
+.navbar-container, .details-container, .projects3d-container{
+    margin: 20px 50px;
+    border-radius: 20px;
+}
+
+
 p{
     margin-left: 80px;
     margin-right: 80px;
@@ -41,18 +47,40 @@ p{
 
 /* Navbar - plus decorators */
 .navbar-container{
-    margin: 50px 0;
     color: white;
 }
 
+.navbar-container ul{
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-container a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.navbar-deco{
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+    height: 0;
+    align-self: center;
+}
+
+.navbar-deco, .navbar-item{
+    margin: 20px;
+}
 
 /* PersonalDetails - about me section */
 .details-container{
     color: white;
-    margin-left: 80px;
-    margin-right: 80px;
     background-image: linear-gradient(#3C1D47, rgba(145, 142, 255, 0.06));
-    border-radius: 20px;
 }
 
 .details-container h1{
@@ -78,9 +106,10 @@ p{
 
 .line-deco{
     align-self: center;
-    border-top: 5px solid #753A88;
-    border-radius: 2px;
-    width: 50px;
+    border: 2px solid #753A88;
+    background-color: #753A88;
+    border-radius: 5px;
+    height: 0;
     width: 15%;
 }
 
@@ -88,7 +117,6 @@ p{
     display: none;
 }
 
-/* contains only card (title + p) */
 .experience-card{
     background-image: linear-gradient(to right, #4B2BCC, #753A88);
     margin: 20px;

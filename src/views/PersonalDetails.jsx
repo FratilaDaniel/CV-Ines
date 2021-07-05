@@ -1,5 +1,4 @@
 import ExperienceCard from "./ExperienceCard";
-import DecorativeLine from "./DecorativeLine";
 
 const WORK_EXPERIENCE = [{
     deco: false,
