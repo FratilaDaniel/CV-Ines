@@ -1,4 +1,7 @@
-/* all text containers - text align */
+body{
+    background-image: linear-gradient(#0B1022, #181318, #211E2D);
+}
+
 h1{
     margin-left: 50px;
 }
@@ -21,7 +24,6 @@ p{
 .general-container{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(#0B1022, #181318, #211E2D);
 }
 
 /* Header - name + bkg img  + navbar*/
