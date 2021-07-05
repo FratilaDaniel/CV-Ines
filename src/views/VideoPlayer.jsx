@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 const VideoPlayer = ({ id }) => (
         <iframe 
-            width="560" 
-            height="315" 
+            width="800" 
+            height="500" 
             src={id} 
             title="YouTube video player" 
             frameborder="0" 
