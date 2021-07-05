@@ -1,3 +1,7 @@
+:root{
+    --arrow-button-size: 60px;
+}
+
 html, body, #root{
     min-height: 100%;
 }
@@ -8,13 +12,18 @@ body{
 
 h1{
     margin-left: 50px;
+    font-size: 3em;
 }
 
-.navbar-container, .details-container, .projects3d-container{
+.navbar-container, .details-container, .projects3d-container, .games-container{
     margin: 20px 50px;
     border-radius: 20px;
 }
 
+.details-container, .projects3d-container, .games-container{
+    background-image: linear-gradient(#3C1D47, rgba(145, 142, 255, 0.06));
+
+}
 
 p{
     margin-left: 80px;
@@ -38,6 +47,11 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: -3;
+}
+
+.header-container img{
+    /* z-index: -2; */
 }
 
 .names-container{
@@ -48,7 +62,8 @@ p{
     /* TODO: change font */
     position: absolute;
     top: 50%;
-    transform: translateY(-40%);
+    transform: translateY(-50%);
+    z-index: -1;
 }
 
 
@@ -87,7 +102,6 @@ p{
 /* PersonalDetails - about me section */
 .details-container{
     color: white;
-    background-image: linear-gradient(#3C1D47, rgba(145, 142, 255, 0.06));
 }
 
 .details-container h1{
@@ -148,9 +162,49 @@ p{
 
 /* Projects - games */
 .games-container{
-    background-color: lightcoral
+    color: white;
 }
 
+.games-container h2{
+    margin-left: 80px;
+    margin-right: 80px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.single-game-container{
+    margin-top: 100px;  /*to remove*/
+}
+
+.video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe{
+    border-radius: 30px;
+}
+
+.video-container button{
+    margin: 20px;
+    width: 0;
+    height: 0;
+    border-top: var(--arrow-button-size) solid transparent;
+    border-bottom: var(--arrow-button-size) solid transparent;
+    background-color: transparent;
+}
+
+
+.left-button{
+    border-right: var(--arrow-button-size) solid #D5CCDF;
+    border-left: 0;
+}
+
+.right-button{
+    border-left: var(--arrow-button-size) solid #D5CCDF;
+    border-right: 0;
+}
 
 /* Projects - art works */
 .artworks-container{
