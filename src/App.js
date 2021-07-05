@@ -1,5 +1,4 @@
 import './App.css';
-import ObjectCard from './ObjectCard/ObjectCard';
 import Header from "./views/Header";
 import PersonalDetails from './views/PersonalDetails';
 import Projects3D from './views/Projects3D';

@@ -2,7 +2,7 @@
 function Footer(){
     return (
         <div className="footer-container">
-            this is footer
+            <p className="credits">©{new Date().getUTCFullYear()} <a href="/#">Daniel Fratila</a></p>
         </div>
     );
 }
