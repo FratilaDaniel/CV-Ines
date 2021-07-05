@@ -1,5 +1,5 @@
 :root{
-    --arrow-button-size: 60px;
+    --arrow-button-size: 40px;
 }
 
 html, body, #root{
@@ -15,12 +15,16 @@ h1{
     font-size: 3em;
 }
 
-.navbar-container, .details-container, .projects3d-container, .games-container{
+.navbar-container, .details-container, 
+.projects3d-container, .games-container, 
+.artworks-container, .slideshow-container{
     margin: 20px 50px;
     border-radius: 20px;
 }
 
-.details-container, .projects3d-container, .games-container{
+.details-container, .projects3d-container, 
+.games-container, .artworks-container,
+.slideshow-container{
     background-image: linear-gradient(#3C1D47, rgba(145, 142, 255, 0.06));
 
 }
@@ -160,58 +164,6 @@ p{
 }
 
 
-/* Projects - games */
-.games-container{
-    color: white;
-}
-
-.games-container h2{
-    margin-left: 80px;
-    margin-right: 80px;
-    font-size: 2em;
-    text-transform: uppercase;
-}
-
-.single-game-container{
-    margin-top: 100px;  /*to remove*/
-}
-
-.video-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-iframe{
-    border-radius: 30px;
-}
-
-.video-container button{
-    margin: 20px;
-    width: 0;
-    height: 0;
-    border-top: var(--arrow-button-size) solid transparent;
-    border-bottom: var(--arrow-button-size) solid transparent;
-    background-color: transparent;
-}
-
-
-.left-button{
-    border-right: var(--arrow-button-size) solid #D5CCDF;
-    border-left: 0;
-}
-
-.right-button{
-    border-left: var(--arrow-button-size) solid #D5CCDF;
-    border-right: 0;
-}
-
-/* Projects - art works */
-.artworks-container{
-    background-color: lightcyan;
-}
-
-
 /* Footer - credits: Dani */
 .footer-container{
     flex: 1;
@@ -223,8 +175,60 @@ iframe{
     color: gray;
 }
 
+/* Generic slideshow */
+.slideshow-container{
+    color: white;
+    padding-bottom: 80px;
+}
 
+.slideshow-container h2{
+    margin-left: 80px;
+    margin-right: 80px;
+    font-size: 2em;
+    text-transform: uppercase;
+}
 
+.slideshow-item-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.visual-container{
+    width: 70%;
+    align-self: center;
+    padding: 50px 0;
+    max-height: 700px;
+    display: flex;
+    justify-content: center;
+}
 
+.visual-container img, iframe{
+    border-radius: 30px;
+}
 
+.buttons-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 3em;
+}
+
+.buttons-container button{
+    margin: 20px;
+    width: 0;
+    height: 0;
+    border-top: var(--arrow-button-size) solid transparent;
+    border-bottom: var(--arrow-button-size) solid transparent;
+    background-color: transparent;
+}
+
+.left-button{
+    border-right: var(--arrow-button-size) solid #D5CCDF;
+    border-left: 0;
+}
+
+.right-button{
+    border-left: var(--arrow-button-size) solid #D5CCDF;
+    border-right: 0;
+}
