@@ -1,11 +1,15 @@
-body{
-    /* background-color: black; */
+/* all text containers - text align */
+h1{
+    margin-left: 50px;
 }
 
-.random-div{
-    background-color: teal;
-    text-align: center;
+p{
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: justify;
+    font-size: 1.5em;
 }
+
 
 /* Page container */
 .general-container{
@@ -13,9 +17,6 @@ body{
     flex-direction: column;
     background-image: linear-gradient(#0B1022, #181318, #211E2D);
 }
-
-
-
 
 /* Header - name + bkg img  + navbar*/
 .header-container{
@@ -28,15 +29,15 @@ body{
 
 .names-container{
     color: white;
-    font-size: 7em;
+    font-size: 5em;
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
     /* TODO: change font */
     position: absolute;
     top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
+    transform: translateY(-40%);
 }
+
 
 /* Navbar - plus decorators */
 .navbar-container{
@@ -44,25 +45,83 @@ body{
     color: white;
 }
 
+
 /* PersonalDetails - about me section */
 .details-container{
-    background-color: lightblue;
+    color: white;
+    margin-left: 80px;
+    margin-right: 80px;
+    background-image: linear-gradient(#3C1D47, rgba(145, 142, 255, 0.06));
+    border-radius: 20px;
 }
+
+.details-container h1{
+    text-transform: uppercase;
+}
+
+.details-text-img-container{
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+}
+
+.details-container img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.experience-card-container{
+    display: flex;
+    justify-content: center;
+}
+
+.line-deco{
+    align-self: center;
+    border-top: 5px solid #753A88;
+    border-radius: 2px;
+    width: 50px;
+    width: 15%;
+}
+
+.line-deco hr{
+    border: none;
+}
+
+/* contains only card (title + p) */
+.experience-card{
+    background-image: linear-gradient(to right, #4B2BCC, #753A88);
+    margin: 20px;
+    border-radius: 50px;
+    text-align: center;
+    width: 25%;
+}
+
+.experience-card p{
+    margin: 20px !important;
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
 
 /* Projects - 3D works */
 .projects3d-container{
     background-color: lightgreen;
 }
 
+
 /* Projects - games */
 .games-container{
     background-color: lightcoral
 }
 
+
 /* Projects - art works */
 .artworks-container{
     background-color: lightcyan;
 }
+
 
 /* Footer - credits: Dani */
 .footer-container{
