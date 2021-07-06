@@ -17,16 +17,16 @@ h1{
 
 .navbar-container, .details-container, 
 .projects3d-container, .games-container, 
-.artworks-container, .slideshow-container{
+.artworks-container, .slideshow-container,
+.model-container{
     margin: 20px 50px;
     border-radius: 20px;
+    background-image: linear-gradient(#3C1D47, rgba(145, 142, 255, 0.06));
+    color: white;
 }
 
-.details-container, .projects3d-container, 
-.games-container, .artworks-container,
-.slideshow-container{
-    background-image: linear-gradient(#3C1D47, rgba(145, 142, 255, 0.06));
-
+.navbar-container{
+    background-image: none;
 }
 
 p{
@@ -159,8 +159,34 @@ p{
 
 
 /* Projects - 3D works */
-.projects3d-container{
-    background-color: lightgreen;
+.project3d-container{
+    /* background-color: lightgreen; */
+    display: flex;
+    justify-content: space-evenly;
+    
+    outline: 2px solid blue;
+    height: 100%;
+}
+
+.model-container{
+    width: 45%;
+    display: flex;
+    align-items: stretch;
+    
+    outline: 2px solid red;
+    
+}
+
+
+
+.project3d-slideshow img{
+    width: 100%;
+}
+
+.project3d-slideshow{
+    width: 45%;
+    outline: 2px solid green;
+
 }
 
 
