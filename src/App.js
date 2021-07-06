@@ -6,6 +6,7 @@ import Artworks from './views/ProjectsArtworks';
 import Games from './views/ProjectsGames';
 import Footer from "./views/Footer";
 import Navbar from "./views/Navbar";
+import Contact from './views/Contact';
 
 function App() {
     return (
@@ -22,15 +23,10 @@ function App() {
                 <Games/>
                 {/* Projects - art works */}
                 <Artworks/>
+                {/* Contact - get in touch info */}
+                <Contact/>
                 {/* Footer - credits: Dani */}
                 <Footer/>
-
-                {/* <div className="random-div">
-                    this is a random div to test mouse hover for other elementIsActive
-                    <br/>
-                    <button>Random button</button>
-                </div>
-               <ObjectCard/>  */}
             </div>
         );
     
