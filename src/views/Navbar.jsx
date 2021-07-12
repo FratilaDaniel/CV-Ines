@@ -30,7 +30,7 @@ const NAVBAR = [{
 },{
     deco: false,
     title: "contact",
-    href: "/#"
+    href: "#contact"
 },{
     deco: true,
     title: "",
