@@ -28,7 +28,7 @@ class ObjectCard extends React.Component{
         const scene = new Scene();
         const camera = new PerspectiveCamera(45, window.innerWidth/window.innerHeight, 1, 1000);
         const renderer = new WebGLRenderer({antialias: true, alpha: true});
-        renderer.setSize(500, 500);
+        renderer.setSize(300, 300);
         renderer.physicallyCorrectLights = true;
         renderer.setClearColor(0x000000, 0);
         this.mount.appendChild(renderer.domElement);

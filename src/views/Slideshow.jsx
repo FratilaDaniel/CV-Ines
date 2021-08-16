@@ -29,7 +29,6 @@ class Slideshow extends React.Component{
     }
 
     getNextIndex(index){
-        console.log(index, (index + 1) % this.state.items.length)
         return (index + 1) % this.state.items.length;
     }
 

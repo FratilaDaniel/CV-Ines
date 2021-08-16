@@ -4,7 +4,7 @@ import berdImg2 from "../artworks/berd_img2.png";
 import Slideshow from "./Slideshow";
 
 const ART_WORKS_INFO = [{
-    title: "A sexy picture of berd",
+    title: "A picture of berd",
     visual: <img src={berdImg1} alt=""/>
 },{
     title: "A better view of berd" ,

@@ -44,6 +44,7 @@ p{
 /* Page container */
 .general-container{
     min-height: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -107,6 +108,11 @@ p{
     margin: 20px;
 }
 
+
+.card-div{
+    display: flex;
+    align-items: center;
+}
 /* PersonalDetails - about me section */
 .details-container{
     color: white;
@@ -164,14 +170,13 @@ p{
 
 /* Projects - 3D works */
 .project3d-container{
-    /* background-color: lightgreen; */
     display: flex;
     justify-content: space-evenly;
-    height: 100%;
+    align-items: stretch;
+    width: 90%;
 }
 
 .model-container{
-    width: 45%;
     display: flex;
     align-items: stretch;
     border: 2px solid purple;
@@ -185,7 +190,6 @@ p{
 }
 
 .project3d-slideshow{
-    width: 45%;
 }
 
 
@@ -217,18 +221,23 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 }
 
 .visual-container{
-    width: 70%;
     align-self: center;
-    padding: 50px 0;
     max-height: 700px;
     display: flex;
     justify-content: center;
 }
 
-.visual-container img, iframe{
+.visual-container img{
+    border-radius: 30px;
+    width: 80%;
+}
+
+.visual-container iframe{
+    /* width: 100%; */
     border-radius: 30px;
 }
 
@@ -267,4 +276,44 @@ p{
 .email-p, .job-p{
     font-size: 2.5em;
     text-align: center;
+}
+
+
+/* Responsive */
+/* 720px? */
+@media screen and (max-width: 800px){
+    .names-container h1{
+        font-size: 3rem;
+    }
+}
+
+/* testing */
+@media screen and (max-width: 1600px){
+    .names-container h1{
+        font-size: 8rem;
+    }
+
+    html, #root, body {
+        overflow-x: hidden !important;
+    }
+
+    .general-container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
+
+/* 4k? */
+
+
+#work-in-progress-modal{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(255, 255, 0, 0.3);
+    width: 100%;
+    height: 2em;
 }

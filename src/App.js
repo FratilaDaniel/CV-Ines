@@ -7,10 +7,12 @@ import Games from './views/ProjectsGames';
 import Footer from "./views/Footer";
 import Navbar from "./views/Navbar";
 import Contact from './views/Contact';
+import WarningModal from './views/WarningModal';
 
 function App() {
     return (
-            <div className="general-container">
+            <div>
+                <WarningModal/>
                 {/* Header - name + bkg img */}
                 <Header/>
                 {/* Navbar menu + decorations */}
